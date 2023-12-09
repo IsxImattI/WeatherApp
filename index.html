@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Web App</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 <body>
     <div class="container">
         <div class="search-box">
-            <i class='bx bx-current-location' ></i>
+            <i class='bx bx-current-location'></i>
             <input type="text" placeholder="Enter location.">
             <button class="bx bx-search"></button>
         </div>
@@ -21,8 +20,9 @@
             <div class="box">
                 <div class="info-weather">
                     <div class="weather">
-                        <img src="">
-                        <p class="temperature"> <span></span></p>
+                        <!-- Updated img tag with id -->
+                        <img id="weatherIcon" src="" alt="Weather Icon">
+                        <p class="temperature"><span></span></p>
                         <p class="description"></p>
                     </div>
                 </div>
@@ -51,10 +51,10 @@
             </div>
         </div>
     </div>
-    </div>
 
     <footer class="copyright-footer">
-        <p>Weather Web App <span class="color">Project</span></p>
+        <p>Weather Web App <span class="color">Project</span><br>
+            Special thanks to amCharts for the amazing weather icons used in this project.<br> </p>
     </footer>
 
     <script src="script.js"></script>

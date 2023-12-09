@@ -76,11 +76,14 @@ body {
 
 .weather-box {
     text-align: center;
-    margin: 40px 0;
+    margin: 0;
+    justify-content: center;
 }
 
 .weather-box img {
     width: 60%;
+    justify-content: center;
+    align-items: center;
 }
 
 .weather-box .temperature {
@@ -233,4 +236,8 @@ body {
 
 .copyright-footer .color {
     color: blue;
+}
+
+#weatherIcon {
+    display: none;
 }

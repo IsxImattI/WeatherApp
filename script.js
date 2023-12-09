@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for the search button
     searchButton.addEventListener("click", function () {
         const location = searchBox.value;
-
         if (location) {
             getWeatherData(location);
         }
@@ -21,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     searchBox.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             const location = searchBox.value;
-
             if (location) {
                 getWeatherData(location);
             }
@@ -50,77 +48,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the weather icon based on weather condition
     function updateWeatherIcon(weatherCondition) {
-        console.log("Updating weather icon for condition:", weatherCondition);
-
         switch (weatherCondition) {
-            case 'Cloudy':
-                weatherIcon.src = 'vreme/cloudy.svg';
-                break;
-            case 'Cloudy1':
-                weatherIcon.src = 'vreme/cloudy1.svg';
-                break;
-            case 'Cloudy2':
-                weatherIcon.src = 'vreme/cloudy2.svg';
-                break;
-            case 'Cloudy3':
-                weatherIcon.src = 'vreme/cloudy3.svg';
-                break;
-            case 'Cloudynight1':
-                weatherIcon.src = 'vreme/cloudynight1.svg';
-                break;
-            case 'Cloudynight2':
-                weatherIcon.src = 'vreme/cloudynight2.svg';
-                break;
-            case 'Cloudynight3':
-                weatherIcon.src = 'vreme/cloudynight3.svg';
-                break;
-            case 'Day':
+            case 'Clear':
                 weatherIcon.src = 'vreme/day.svg';
                 break;
-            case 'Night':
-                weatherIcon.src = 'vreme/night.svg';
+            case 'Clouds':
+                weatherIcon.src = 'vreme/cloudy.svg';
                 break;
-            case 'rainy1':
+            case 'Rain':
                 weatherIcon.src = 'vreme/rainy-1.svg';
                 break;
-            case 'rainy2':
-                weatherIcon.src = 'vreme/rainy-2.svg';
-                break;
-            case 'rainy3':
-                weatherIcon.src = 'vreme/rainy-3.svg';
-                break;
-            case 'rainy4':
+            case 'Drizzle':
                 weatherIcon.src = 'vreme/rainy-4.svg';
                 break;
-            case 'rainy5':
-                weatherIcon.src = 'vreme/rainy-5.svg';
-                break;
-            case 'rainy6':
-                weatherIcon.src = 'vreme/rainy-6.svg';
-                break;
-            case 'snowy1':
+            case 'Snow':
                 weatherIcon.src = 'vreme/snowy-1.svg';
                 break;
-            case 'snowy2':
-                weatherIcon.src = 'vreme/snowy-2.svg';
-                break;
-            case 'snowy3':
-                weatherIcon.src = 'vreme/snowy-3.svg';
-                break;
-            case 'snowy4':
-                weatherIcon.src = 'vreme/snowy-4.svg';
-                break;
-            case 'snowy5':
-                weatherIcon.src = 'vreme/snowy-5.svg';
-                break;
-            case 'snowy6':
-                weatherIcon.src = 'vreme/snowy-6.svg';
-                break;
-            case 'thunder':
+            case 'Thunderstorm':
                 weatherIcon.src = 'vreme/thunder.svg';
                 break;
             default:
                 weatherIcon.src = 'vreme/cloudy.svg';
         }
+        weatherIcon.style.display = 'inline-block';
     }
 });
